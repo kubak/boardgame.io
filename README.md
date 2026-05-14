@@ -1,13 +1,13 @@
 <p align="center">
   <a href="https://boardgame.io/">
-    <img src="https://raw.githubusercontent.com/boardgameio/boardgame.io/main/docs/logo-optimized.svg?sanitize=true" alt="boardgame.io" />
+    <img src="https://raw.githubusercontent.com/lean-poker/boardgame.io/main/docs/logo-optimized.svg?sanitize=true" alt="boardgame.io" />
   </a>
 </p>
 
 <p align="center">
-<a href="https://www.npmjs.com/package/boardgame.io"><img src="https://badge.fury.io/js/boardgame.io.svg" alt="npm version" /></a>
-<a href="https://github.com/boardgameio/boardgame.io/actions?query=workflow%3ATests"> <img src="https://github.com/boardgameio/boardgame.io/workflows/Tests/badge.svg" alt='Build Status'></a>
-<a href='https://coveralls.io/github/boardgameio/boardgame.io?branch=main'><img src='https://coveralls.io/repos/github/boardgameio/boardgame.io/badge.svg?branch=main' alt='Coverage Status' /></a>
+<a href="https://www.npmjs.com/package/@lean-poker/boardgame.io"><img src="https://badge.fury.io/js/@lean-poker%2Fboardgame.io.svg" alt="npm version" /></a>
+<a href="https://github.com/lean-poker/boardgame.io/actions?query=workflow%3ATests"> <img src="https://github.com/lean-poker/boardgame.io/workflows/Tests/badge.svg" alt='Build Status'></a>
+<a href='https://coveralls.io/github/lean-poker/boardgame.io?branch=main'><img src='https://coveralls.io/repos/github/lean-poker/boardgame.io/badge.svg?branch=main' alt='Coverage Status' /></a>
 <a href="https://gitter.im/boardgame-io"><img src="https://badges.gitter.im/boardgame-io.svg" alt="Gitter" /></a>
 </p>
 
@@ -88,11 +88,11 @@ and the [project roadmap](roadmap.md).
 Pull requests even for small changes can be helpful. Each page in the
 docs can be edited by clicking the “Edit on GitHub” link at the top right.
 
-[new-issue]: https://github.com/boardgameio/boardgame.io/issues/new/choose
+[new-issue]: https://github.com/lean-poker/boardgame.io/issues/new/choose
 [gitter]: https://gitter.im/boardgame-io/General
-[discussions]: https://github.com/boardgameio/boardgame.io/discussions
-[bugs]: https://github.com/boardgameio/boardgame.io/issues?q=is%3Aissue+is%3Aopen+label%3Abug
-[features]: https://github.com/boardgameio/boardgame.io/issues?q=is%3Aissue+is%3Aopen+label%3Afeature
+[discussions]: https://github.com/lean-poker/boardgame.io/discussions
+[bugs]: https://github.com/lean-poker/boardgame.io/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+[features]: https://github.com/lean-poker/boardgame.io/issues?q=is%3Aissue+is%3Aopen+label%3Afeature
 [docs]: https://boardgame.io/documentation/
 [sponsors]: https://github.com/sponsors/boardgameio
 [collective]: https://opencollective.com/boardgameio#support

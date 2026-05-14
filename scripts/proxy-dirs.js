@@ -13,7 +13,7 @@ const { mkdirSync, writeFileSync } = require('node:fs');
 function PackageJson(name, { mainDir, esmDir } = {}) {
   const root = '../dist';
   const pkg = {
-    name: `boardgame.io/${name}`,
+    name: `@lean-poker/boardgame.io/${name}`,
     private: true,
     types: `../dist/types/packages/${name}.d.ts`,
     main: path.join(root, mainDir, `${name}.js`),

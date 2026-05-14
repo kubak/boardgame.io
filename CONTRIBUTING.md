@@ -2,15 +2,15 @@
 
 ## Finding things to contribute to
 
-Please use the [Issue Tracker](https://github.com/boardgameio/boardgame.io/issues) to discuss
+Please use the [Issue Tracker](https://github.com/lean-poker/boardgame.io/issues) to discuss
 potential improvements you want to make before sending a Pull Request.
 The [roadmap](roadmap.md) is probably the best place to find areas where help would
 most be appreciated.
 
 The Issue Tracker may contain items labelled [**good first issue**][gfi] or [**help wanted**][hw] from time to time.
 
-[hw]: https://github.com/boardgameio/boardgame.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22+
-[gfi]: https://github.com/boardgameio/boardgame.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22
+[hw]: https://github.com/lean-poker/boardgame.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22+
+[gfi]: https://github.com/lean-poker/boardgame.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22
 
 ## Pull Requests
 
@@ -68,7 +68,7 @@ For minimal effort, the repository is configured to run in a remote dev containe
 
 - Launch VS Code
 - Click the Remote Development icon in the bottom left corner of the UI, then "Clone repository in Container Volume..."
-- Paste `https://github.com/boardgameio/boardgame.io` or use your own fork, any branch, or a pull request
+- Paste `https://github.com/lean-poker/boardgame.io` or use your own fork, any branch, or a pull request
 - The container will start up and install all required dependencies automatically
 - Terminal output will cease when everything is set up and ready to go
 

@@ -1,8 +1,8 @@
 {
-  "name": "boardgame.io",
+  "name": "@lean-poker/boardgame.io",
   "version": "0.50.2",
   "description": "library for turn-based games",
-  "repository": "https://github.com/boardgameio/boardgame.io",
+  "repository": "https://github.com/lean-poker/boardgame.io",
   "scripts": {
     "prestart": "run-p examples:install build",
     "start": "run-p dev:server dev:client",
@@ -68,11 +68,14 @@
     "game engine"
   ],
   "engines": {
-    "node": ">=10.0",
-    "npm": ">=6.0"
+    "node": ">=20",
+    "npm": ">=10"
   },
   "author": "nicolodavis@gmail.com",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "funding": [
     "https://github.com/boardgameio/boardgame.io?sponsor=1",
     {
