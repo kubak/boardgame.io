@@ -9,7 +9,9 @@
     "process": "^0.11.10"
   },
   "alias": {
-    "boardgame.io": "../../dist/esm"
+    "boardgame.io": "../../dist/esm",
+    "react": "./node_modules/react",
+    "react-dom": "./node_modules/react-dom"
   },
   "browserslist": [
     "last 1 Chrome versions",
