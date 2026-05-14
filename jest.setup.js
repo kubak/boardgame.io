@@ -21,3 +21,10 @@ if (globalThis.MessagePort === undefined) {
   globalThis.MessagePort = MessagePort;
   globalThis.MessageChannel = MessageChannel;
 }
+
+// Note: `npm test` runs jest with --forceExit. React's scheduler
+// (scheduler.development.js) creates a module-level MessageChannel
+// at import time and never disposes it; setting .onmessage on the
+// receiving port re-refs it even after .unref(), so jest's process
+// will not exit cleanly on its own. This is a React-side limitation,
+// not a leak in our tests.
