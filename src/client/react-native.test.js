@@ -8,7 +8,7 @@
 /* eslint-disable unicorn/no-array-callback-reference */
 
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import { Client } from './react-native';
 import { Local } from './transport/local';
 import { Transport } from './transport/transport';
@@ -115,7 +115,7 @@ test('move api', () => {
   render(<Board />);
 
   expect(capturedBoardProps.G).toEqual({});
-  capturedBoardProps.moves.A(42);
+  act(() => capturedBoardProps.moves.A(42));
   expect(capturedBoardProps.G).toEqual({ arg: 42 });
 });
 
@@ -212,9 +212,9 @@ test('reset Game', () => {
   };
 
   expect(capturedBoardProps.G).toEqual({});
-  capturedBoardProps.moves.A(42);
+  act(() => capturedBoardProps.moves.A(42));
   expect(capturedBoardProps.G).toEqual({ arg: 42 });
-  capturedBoardProps.reset();
+  act(() => capturedBoardProps.reset());
   expect(capturedBoardProps.G).toEqual(initial.G);
   expect(capturedBoardProps.ctx).toEqual(initial.ctx);
 });

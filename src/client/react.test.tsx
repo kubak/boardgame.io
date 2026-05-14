@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import type { BoardProps } from './react';
 import { Client } from './react';
 import { Local } from './transport/local';
@@ -107,7 +107,7 @@ test('move api', () => {
   render(<Board />);
 
   expect(lastBoardProps.G).toEqual({});
-  lastBoardProps.moves.A(42);
+  act(() => lastBoardProps.moves.A(42));
   expect(lastBoardProps.G).toEqual({ arg: 42 });
 });
 
@@ -213,9 +213,9 @@ test('reset Game', () => {
   };
 
   expect(lastBoardProps.G).toEqual({});
-  lastBoardProps.moves.A(42);
+  act(() => lastBoardProps.moves.A(42));
   expect(lastBoardProps.G).toEqual({ arg: 42 });
-  lastBoardProps.reset();
+  act(() => lastBoardProps.reset());
   expect(lastBoardProps.G).toEqual(initial.G);
   expect(lastBoardProps.ctx).toEqual(initial.ctx);
 });
