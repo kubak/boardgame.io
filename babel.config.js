@@ -20,7 +20,7 @@ module.exports = {
       'module-resolver',
       {
         alias: {
-          'boardgame.io': './packages',
+          '@lean-poker/boardgame.io': './packages',
         },
       },
     ],
