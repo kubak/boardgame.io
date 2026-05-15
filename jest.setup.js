@@ -16,15 +16,17 @@ if (globalThis.ReadableStream === undefined) {
   globalThis.WritableStream = WritableStream;
   globalThis.TransformStream = TransformStream;
 }
+// jsdom strips setImmediate from the test global. React's scheduler prefers
+// setImmediate over MessageChannel (scheduler.development.js); restoring it
+// lets the scheduler avoid the MessagePort, which would otherwise keep the
+// event loop ref'd via .onmessage and force jest to use --forceExit.
+if (globalThis.setImmediate === undefined) {
+  const { setImmediate, clearImmediate } = require('node:timers');
+  globalThis.setImmediate = setImmediate;
+  globalThis.clearImmediate = clearImmediate;
+}
 if (globalThis.MessagePort === undefined) {
   const { MessagePort, MessageChannel } = require('node:worker_threads');
   globalThis.MessagePort = MessagePort;
   globalThis.MessageChannel = MessageChannel;
 }
-
-// Note: `npm test` runs jest with --forceExit. React's scheduler
-// (scheduler.development.js) creates a module-level MessageChannel
-// at import time and never disposes it; setting .onmessage on the
-// receiving port re-refs it even after .unref(), so jest's process
-// will not exit cleanly on its own. This is a React-side limitation,
-// not a leak in our tests.
