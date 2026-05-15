@@ -141,7 +141,6 @@
     "shelljs": "^0.10.0",
     "supertest": "^7.2.2",
     "svelte": "^5.0.0",
-    "svelte-jester": "^5.0.0",
     "tempy": "^1.0.1",
     "ts-jest": "^29.4.9",
     "typescript": "^5.9.3"
@@ -197,10 +196,10 @@
       "@testing-library/jest-dom"
     ],
     "transform": {
-      "^.+\\.svelte$": "svelte-jester"
+      "^.+\\.svelte$": "<rootDir>/jest-svelte-transformer.cjs"
     },
     "transformIgnorePatterns": [
-      "node_modules/(?!(boardgame.io|flatted|svelte|svelte-json-tree-auto)/)"
+      "node_modules/(?!(boardgame.io|flatted|svelte|svelte-json-tree-auto|esm-env|devalue|zimmerframe)/)"
     ],
     "testPathIgnorePatterns": [
       "examples/",
