@@ -100,7 +100,7 @@
     "@rollup/plugin-terser": "^0.4.4",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
-    "@testing-library/svelte": "^3.2.2",
+    "@testing-library/svelte": "^5.2.4",
     "@types/jest": "^30.0.0",
     "@types/js-cookie": "^3.0.6",
     "@types/koa__cors": "^5.0.1",
@@ -125,7 +125,6 @@
     "jest": "^30.3.0",
     "jest-date-mock": "^1.0.10",
     "jest-environment-jsdom": "^30.2.0",
-    "jest-transform-svelte": "^2.1.1",
     "lint-staged": "^17.0.2",
     "node-persist": "^4.0.4",
     "nodemon": "^3.1.14",
@@ -141,8 +140,8 @@
     "rollup-plugin-typescript2": "^0.37.0",
     "shelljs": "^0.10.0",
     "supertest": "^7.2.2",
-    "svelte": "^3.59.2",
-    "svelte-icons": "^2.1.0",
+    "svelte": "^5.0.0",
+    "svelte-jester": "^5.0.0",
     "tempy": "^1.0.1",
     "ts-jest": "^29.4.9",
     "typescript": "^5.9.3"
@@ -198,10 +197,10 @@
       "@testing-library/jest-dom"
     ],
     "transform": {
-      "^.+\\.svelte$": "jest-transform-svelte"
+      "^.+\\.svelte$": "svelte-jester"
     },
     "transformIgnorePatterns": [
-      "node_modules/(?!(boardgame.io|flatted|svelte-icons)/)"
+      "node_modules/(?!(boardgame.io|flatted|svelte|svelte-json-tree-auto)/)"
     ],
     "testPathIgnorePatterns": [
       "examples/",
