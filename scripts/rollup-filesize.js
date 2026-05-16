@@ -6,6 +6,7 @@
  * https://opensource.org/licenses/MIT.
  */
 
+import { join } from 'node:path';
 import { brotliCompressSync, gzipSync } from 'node:zlib';
 
 const fmt = (bytes) =>
@@ -22,7 +23,7 @@ export default function filesize() {
       return null;
     },
 
-    generateBundle(_, bundle) {
+    generateBundle(options, bundle) {
       const entries = Object.entries(bundle).filter(
         ([, item]) => item.type === 'chunk',
       );
@@ -33,9 +34,10 @@ export default function filesize() {
         const minified = Buffer.byteLength(item.code, 'utf8');
         const gzipped = gzipSync(item.code).length;
         const brotli = brotliCompressSync(item.code).length;
+        const destination = options.file ?? join(options.dir, fileName);
 
         if (index > 0) console.log('');
-        console.log(`Destination: ${fileName}`);
+        console.log(`Destination: ${destination}`);
         console.log(`Bundle Size: ${fmt(raw)}`);
         console.log(`Minified Size: ${fmt(minified)}`);
         console.log(`Gzipped Size: ${fmt(gzipped)}`);
