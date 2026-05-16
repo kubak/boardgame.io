@@ -20,6 +20,9 @@ importers:
       '@types/koa__router':
         specifier: ^12.0.5
         version: 12.0.5
+      cors:
+        specifier: ^2.8.6
+        version: 2.8.6
       flatted:
         specifier: ^3.4.2
         version: 3.4.2
@@ -120,6 +123,9 @@ importers:
       '@testing-library/svelte':
         specifier: ^5.2.4
         version: 5.3.1(svelte@5.55.7(@typescript-eslint/types@8.59.2))
+      '@types/cors':
+        specifier: ^2.8.19
+        version: 2.8.19
       '@types/jest':
         specifier: ^30.0.0
         version: 30.0.0
@@ -1530,8 +1536,8 @@ packages:
   '@types/cookies@0.7.7':
     resolution: {integrity: sha512-h7BcvPUogWbKCzBR2lY4oqaZbO3jXZksexYJVFvkrFeLgbZjQkU4x8pRq6eg2MHXQhY0McQdqmmsxRWlVAHooA==}
 
-  '@types/cors@2.8.12':
-    resolution: {integrity: sha512-vt+kDhq/M2ayberEtJcIN/hxXy1Pk+59g2FV/ZQceeaTyCtCucjL2Q7FXlFjtWn4n15KCr1NE2lNNFhp0lEThw==}
+  '@types/cors@2.8.19':
+    resolution: {integrity: sha512-mFNylyeyqN93lfe/9CSxOGREz8cpzAhH+E93xJ4xWQf62V8sQ/24reV2nyzUWM6H6Xji+GGHpkbLe7pVoUEskg==}
 
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
@@ -2296,8 +2302,8 @@ packages:
   core-js@3.49.0:
     resolution: {integrity: sha512-es1U2+YTtzpwkxVLwAFdSpaIMyQaq0PBgm3YD1W3Qpsn1NAmO3KSgZfu+oGSWVu6NvLHoHCV/aYcsE5wiB7ALg==}
 
-  cors@2.8.5:
-    resolution: {integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==}
+  cors@2.8.6:
+    resolution: {integrity: sha512-tJtZBBHA6vjIAaF6EnIaq6laBBP9aq/Y3ouVJjEfoHbRBcHBAHYcMh/w8LDrk2PvIMMq8gmopa5D4V8RmbrxGw==}
     engines: {node: '>= 0.10'}
 
   cp-file@7.0.0:
@@ -7060,7 +7066,9 @@ snapshots:
       '@types/keygrip': 1.0.2
       '@types/node': 25.6.0
 
-  '@types/cors@2.8.12': {}
+  '@types/cors@2.8.19':
+    dependencies:
+      '@types/node': 25.6.0
 
   '@types/estree@1.0.8': {}
 
@@ -7926,7 +7934,7 @@ snapshots:
 
   core-js@3.49.0: {}
 
-  cors@2.8.5:
+  cors@2.8.6:
     dependencies:
       object-assign: 4.1.1
       vary: 1.1.2
@@ -8192,13 +8200,13 @@ snapshots:
 
   engine.io@6.6.7:
     dependencies:
-      '@types/cors': 2.8.12
+      '@types/cors': 2.8.19
       '@types/node': 25.6.0
       '@types/ws': 8.18.1
       accepts: 1.3.8
       base64id: 2.0.0
       cookie: 0.7.2
-      cors: 2.8.5
+      cors: 2.8.6
       debug: 4.4.3(supports-color@5.5.0)
       engine.io-parser: 5.2.3
       ws: 8.18.3
@@ -10907,7 +10915,7 @@ snapshots:
     dependencies:
       accepts: 1.3.8
       base64id: 2.0.0
-      cors: 2.8.5
+      cors: 2.8.6
       debug: 4.4.3(supports-color@5.5.0)
       engine.io: 6.6.7
       socket.io-adapter: 2.5.5

@@ -105,6 +105,7 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/svelte": "^5.2.4",
+    "@types/cors": "^2.8.19",
     "@types/jest": "^30.0.0",
     "@types/js-cookie": "^3.0.6",
     "@types/koa__cors": "^5.0.1",
@@ -153,6 +154,7 @@
     "@koa/router": "^15.5.0",
     "@types/koa": "^3.0.2",
     "@types/koa__router": "^12.0.5",
+    "cors": "^2.8.6",
     "flatted": "^3.4.2",
     "immer": "^11.1.7",
     "js-cookie": "^3.0.5",
@@ -206,7 +208,8 @@
       "^.+\\.svelte$": "<rootDir>/jest-svelte-transformer.cjs"
     },
     "transformIgnorePatterns": [
-      "node_modules/(?!(boardgame.io|flatted|svelte|svelte-json-tree-auto|esm-env|devalue|zimmerframe|@testing-library/(svelte|svelte-core))/)"
+      "node_modules/\\.pnpm/(?!(boardgame.io|flatted|svelte|svelte-json-tree-auto|esm-env|devalue|zimmerframe|@testing-library\\+(svelte|svelte-core))@)",
+      "node_modules/(?!\\.pnpm/)(?!(boardgame.io|flatted|svelte|svelte-json-tree-auto|esm-env|devalue|zimmerframe|@testing-library/(svelte|svelte-core))/)"
     ],
     "testPathIgnorePatterns": [
       "examples/",
