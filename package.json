@@ -46,6 +46,11 @@
   "types": "dist/types/src/types.d.ts",
   "files": [
     "src",
+    "!src/**/*.test.ts",
+    "!src/**/*.test.tsx",
+    "!src/**/*.test.js",
+    "!src/**/*.test.jsx",
+    "!src/client/debug/tests",
     "dist/boardgameio.js",
     "dist/boardgameio.min.js",
     "dist/boardgameio.es.js",
@@ -215,7 +220,8 @@
       "examples/",
       "integration/",
       "node_modules/",
-      ".npm/"
+      ".npm/",
+      ".claude/"
     ]
   }
 }
