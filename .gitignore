@@ -13,3 +13,6 @@ npm
 .vscode/*
 .rpt2_cache/
 .rush/
+.claude-channel
+.claude/worktrees
+.claude/scheduled_tasks.lock
