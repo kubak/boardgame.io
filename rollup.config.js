@@ -92,7 +92,7 @@ export default [
   // Server.
   {
     input: 'packages/server.ts',
-    output: { dir: 'dist/cjs', format: 'cjs' },
+    output: { dir: 'dist/cjs', format: 'cjs', interop: 'auto' },
     external,
     plugins: serverPlugins,
   },
