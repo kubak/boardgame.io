@@ -1,6 +1,0 @@
-{
-  "name": "@kubak/boardgame.io/server",
-  "private": true,
-  "types": "../dist/types/packages/server.d.ts",
-  "main": "../dist/cjs/server.js"
-}

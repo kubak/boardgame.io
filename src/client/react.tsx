@@ -7,7 +7,6 @@
  */
 
 import React from 'react';
-import { flushSync } from 'react-dom';
 import PropTypes from 'prop-types';
 import { Client as RawClient } from './client';
 import type { ClientOpts, ClientState, _ClientImpl } from './client';
@@ -139,7 +138,7 @@ export function Client<
 
     componentDidMount() {
       this.unsubscribe = this.client.subscribe(() =>
-        flushSync(() => this.forceUpdate()),
+        queueMicrotask(() => this.forceUpdate()),
       );
       this.client.start();
     }
