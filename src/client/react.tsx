@@ -7,15 +7,10 @@
  */
 
 import React from 'react';
+import { flushSync } from 'react-dom';
 import PropTypes from 'prop-types';
 import { Client as RawClient } from './client';
 import type { ClientOpts, ClientState, _ClientImpl } from './client';
-
-// Use require for react-dom to avoid Rollup tree-shaking issues
-// with CJS re-exports. At runtime, this resolves to the consumer's react-dom.
-const { flushSync } = require('react-dom') as {
-  flushSync: (fn: () => void) => void;
-};
 
 type WrappedBoardDelegates = 'matchID' | 'playerID' | 'credentials';
 

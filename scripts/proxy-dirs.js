@@ -8,25 +8,28 @@
 
 const subpackages = require('../subpackages');
 const path = require('node:path');
-const { mkdirSync, writeFileSync } = require('node:fs');
+const { mkdirSync, writeFileSync, existsSync } = require('node:fs');
+const pkg = require('../package.json');
 
 function PackageJson(name, { mainDir, esmDir } = {}) {
   const root = '../dist';
-  const pkg = {
-    name: `@lean-poker/boardgame.io/${name}`,
+  const p = {
+    name: `${pkg.name}/${name}`,
     private: true,
     types: `../dist/types/packages/${name}.d.ts`,
     main: path.join(root, mainDir, `${name}.js`),
   };
   if (esmDir) {
-    pkg.module = path.join(root, esmDir, `${name}.js`);
+    p.module = path.join(root, esmDir, `${name}.js`);
   }
-  return JSON.stringify(pkg, null, 2) + '\n';
+  return JSON.stringify(p, null, 2) + '\n';
 }
 
 function makeSubpackage(name, opts) {
   const dir = path.resolve(__dirname, `../${name}`);
-  mkdirSync(dir);
+  if (!existsSync(dir)) {
+    mkdirSync(dir);
+  }
   writeFileSync(`${dir}/package.json`, PackageJson(name, opts));
 }
 
