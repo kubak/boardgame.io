@@ -1,0 +1,7 @@
+{
+  "name": "@kubak/boardgame.io/debug",
+  "private": true,
+  "types": "../dist/types/packages/debug.d.ts",
+  "main": "../dist/cjs/debug.js",
+  "module": "../dist/esm/debug.js"
+}

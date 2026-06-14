@@ -114,7 +114,7 @@ export function Client<
       matchID: 'default',
       playerID: null,
       credentials: null,
-      debug: true,
+      debug: false,
     };
 
     constructor(props: WrappedBoardProps & AdditionalProps) {
