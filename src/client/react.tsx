@@ -11,9 +11,11 @@ import PropTypes from 'prop-types';
 import { Client as RawClient } from './client';
 import type { ClientOpts, ClientState, _ClientImpl } from './client';
 
-// Use require for react-dom to avoid Rollup tree-shaking issues 
+// Use require for react-dom to avoid Rollup tree-shaking issues
 // with CJS re-exports. At runtime, this resolves to the consumer's react-dom.
-const { flushSync } = require('react-dom') as { flushSync: (fn: () => void) => void };
+const { flushSync } = require('react-dom') as {
+  flushSync: (fn: () => void) => void;
+};
 
 type WrappedBoardDelegates = 'matchID' | 'playerID' | 'credentials';
 
@@ -142,7 +144,7 @@ export function Client<
 
     componentDidMount() {
       this.unsubscribe = this.client.subscribe(() =>
-        flushSync(() => this.forceUpdate())
+        flushSync(() => this.forceUpdate()),
       );
       this.client.start();
     }
