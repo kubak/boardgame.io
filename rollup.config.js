@@ -24,6 +24,7 @@ const internalDeps = new Set(['svelte']);
 const external = [
   ...Object.keys(pkg.dependencies).filter((name) => !internalDeps.has(name)),
   'react',
+  'react-dom',
   'socket.io-client',
 ];
 

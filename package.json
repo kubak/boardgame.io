@@ -1,5 +1,5 @@
 {
-  "name": "@lean-poker/boardgame.io",
+  "name": "@kubak/boardgame.io",
   "version": "0.50.4",
   "packageManager": "pnpm@10.16.0",
   "pnpm": {
